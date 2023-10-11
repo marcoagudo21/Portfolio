@@ -579,8 +579,11 @@ footer h3{
 
 @media screen and (max-width: 560px){
   #working{
-    right: 15%;
-    top: 108%;
+    display: none;
+  }
+
+  #circle{
+    display: none;
   }
 }
 
@@ -676,9 +679,6 @@ footer h3{
     font-size: 1em;
   }
 
-  #working{
-    right: 17%;
-  }
 }
 
 @media screen and (max-width: 403px){
@@ -704,7 +704,15 @@ footer h3{
     width: 100%;
   }
 
-  #working{
-    right: 20%;
+  .section1 .article2 h1{
+    font-size: 20px;
+  }
+
+  .section1 .article2 .grid__container img{
+    height: 40px;
+  }
+
+  .section1 .article2{
+    padding: 0px 14px;
   }
 }
