@@ -578,6 +578,17 @@ footer h3{
 }
 
 @media screen and (max-width: 560px){
+
+
+  .projects .projects__subtitle{
+    margin-top: 20px;
+  }
+
+  .projects .projects__subtitle h2{
+    font-size: 1rem;
+    padding: 0;
+  }
+
   #working{
     display: none;
   }
@@ -684,8 +695,18 @@ footer h3{
 @media screen and (max-width: 403px){
 
   .hero__container .img__container img{
+    width: 95%;
+  }
+
+
+  .section1 .article1 .desc__img{
+    margin: 0 auto;
+  }
+
+  .projects{
     width: 100%;
   }
+
 
   .hero__container main .me__info h1{
     font-size: 45px;
@@ -693,6 +714,7 @@ footer h3{
 
   .projects .project{
     flex-direction: column-reverse;
+    margin: 30px 5px 0px 5px;
   }
 
   .projects .project img{
@@ -702,6 +724,38 @@ footer h3{
 
   .projects .project .project__info{
     width: 100%;
+  }
+
+  .projects h3{
+    width: 95%;
+  }
+
+  .projects .projects__subtitle{
+    padding: 0 5px;
+  }
+
+  .projects .projects__subtitle h2{
+    padding: 0;
+  }
+
+  .hero__container main{
+    width: 100% ;
+  }
+
+  .section1 .article1{
+    width: 100%;
+  }
+
+  .section1 .article1 .desc{
+    width: 100%;
+  }
+
+  .section1 .article1 .desc h1{
+    padding: 0 5px;
+  }
+
+  .section1 .article1 .desc p{
+    padding: 0 5px;
   }
 
   .section1 .article2 h1{
@@ -715,4 +769,29 @@ footer h3{
   .section1 .article2{
     padding: 0px 14px;
   }
+
+  .projects__subtitle img{
+    height: 2.5rem;
+  }
+  
+  .section3{
+    width: 100%;
+  }
+
+  .section3 h3{
+    width: auto;
+  }
+  
+  .section3 .contact__container .contact__item {
+    margin-left: 5px;
+  }
+
+}
+
+@media screen and (max-width: 379px){
+
+  .hero__container nav ul {
+    font-size: 0.8em;
+}
+
 }
