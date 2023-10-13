@@ -12,6 +12,7 @@
 .hero__container nav {
   width: 95%;
   background-color: #f9f9f9fa;
+  z-index: 10;
   
 }
 
@@ -274,9 +275,40 @@ hr {
 
 }
 
-.projects .project img{
+.projects .project .img{
   width: 45%;
   border-radius: 10px;
+  overflow: hidden;
+  
+}
+
+.projects .project .img img{
+  width: 100%;
+  transform: translateY(0%);
+  transition: transform 10s ease;
+}
+
+.projects .project .img2{
+  width: 45%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.projects .project .img2 img{
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+}
+
+.projects .project .img:hover img {
+  width: 100%;
+  transform: translateY(-50%);
+  transition: transform 10s ease;
+  
 }
 
 .projects .project .project__info{
@@ -322,15 +354,22 @@ hr {
   color: #2D2E32;
 }
 
+
+.projects .project .project__info a{
+  font-size: 0.8rem;
+  margin-left: 5px;
+  display: flex;
+
+}
+
 .projects .project .project__info a:hover{
   color: #8bce7e;
+  cursor: pointer;
 }
 
-.projects .project .project__info a img{
-  height: 25px;
-  margin-left: 5px;
+a span{
+  margin-right: 5px;
 }
-
 
 .section3{
   display: flex;
@@ -455,6 +494,15 @@ footer h3{
   }
 }
 
+@keyframes transform {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
 @media screen and (max-width: 1070px){
   .hero__container nav ul{
     justify-content: center;
@@ -534,6 +582,20 @@ footer h3{
 
 }
 
+
+@media screen and (min-width: 1677px){
+  #working{
+    top: 79%;
+    left: -44%;
+  }
+}
+@media screen and (min-width: 1920px){
+  #working{
+    top: 78%;
+    left: -42.5%;
+  }
+}
+
 @media screen and (max-width: 768px){
 
   .hero__container .img__container img{
@@ -568,8 +630,17 @@ footer h3{
     padding-top: 10px;
   }
 
-  .projects .project img{
+  
+  .projects .project .img2{
     width: 50%;
+  }
+  
+  .projects .project .img2 img{
+    height: 100%;
+  }
+
+  .projects .project .img{
+    
   }
   #working{
     right: 12.5%;
@@ -634,6 +705,7 @@ footer h3{
 
   .projects .project{
     margin: 30px 0 0 0;
+    flex-direction: column-reverse;
   }
 
   .projects .project .project__info p{
@@ -648,13 +720,14 @@ footer h3{
     font-size: 0.8rem;
   }
 
+  .projects .project .project__info a svg{
+    height: 40px;
+  }
+
   .projects .project .project__info .project__info__buttons{
     gap: 25px;
   }
 
-  .projects .project .project__info a img{
-    height: 20px;
-  }
   
   .projects .project .project__info p{
     display: none;
@@ -680,15 +753,30 @@ footer h3{
 
   .projects .projects__subtitle{
     margin-top: 10px;
+    padding: 0 5px;
   }
 
   .projects .projects__subtitle h2{
     font-size: 0.9rem;
+    padding: 0;
   }
 
   .hero__container nav ul{
     font-size: 1em;
   }
+  .projects .project .img2{
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .projects .project .project__info{
+    width: 100%;
+  }
+
+  .projects h3{
+    width: 95%;
+  }
+
 
 }
 
@@ -712,31 +800,9 @@ footer h3{
     font-size: 45px;
   }
 
-  .projects .project{
-    flex-direction: column-reverse;
-    margin: 30px 5px 0px 5px;
-  }
+  
 
-  .projects .project img{
-    width: 100%;
-    margin: 15px 0;
-  }
-
-  .projects .project .project__info{
-    width: 100%;
-  }
-
-  .projects h3{
-    width: 95%;
-  }
-
-  .projects .projects__subtitle{
-    padding: 0 5px;
-  }
-
-  .projects .projects__subtitle h2{
-    padding: 0;
-  }
+  
 
   .hero__container main{
     width: 100% ;
